@@ -175,8 +175,8 @@ export default function TrustSection() {
                     </div>
 
                     <div className="mt-3 border-t border-[#EAE3D6] pt-2">
-                      <div className="flex items-center gap-1.5 text-[10px] font-bold text-[#B99A62]">
-                        <CheckCircle2 size={11} />
+                      <div className="flex items-center gap-1.5 text-[10px] font-bold text-[#826735]">
+                        <CheckCircle2 size={11} className="text-[#826735]" />
                         <span>Verified Google Record</span>
                       </div>
                     </div>
@@ -233,8 +233,8 @@ export default function TrustSection() {
                 </div>
 
                 <div className="mt-4 border-t border-[#EAE3D6] pt-3">
-                  <div className="flex items-center gap-1.5 text-[10px] font-bold text-[#B99A62]">
-                    <CheckCircle2 size={12} />
+                  <div className="flex items-center gap-1.5 text-[10px] font-bold text-[#826735]">
+                    <CheckCircle2 size={12} className="text-[#826735]" />
                     <span>Verified Google Record</span>
                   </div>
                 </div>

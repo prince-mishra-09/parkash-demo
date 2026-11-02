@@ -19,33 +19,33 @@ export default function StickyMobileCTA() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-[#B99A62]/30 bg-[#12231D]/98 px-3 py-2.5 shadow-2xl backdrop-blur-lg lg:hidden">
+    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-[#B99A62]/30 bg-[#12231D]/98 px-3 pt-2 pb-[max(0.65rem,env(safe-area-inset-bottom))] shadow-2xl backdrop-blur-lg lg:hidden">
       <div className="mx-auto flex max-w-lg items-center justify-between gap-2">
         {/* Direct Phone Call */}
         <a
           href={BUSINESS_DETAILS.phones[0].tel}
-          className="flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-white/20 bg-[#17352D] py-2.5 text-xs font-bold text-[#FAF7F2] shadow-xs active:scale-95"
-          aria-label="Call Dispatcher"
+          className="flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-[#B99A62]/30 bg-[#17352D] py-2.5 text-xs font-bold text-[#FAF7F2] shadow-xs transition hover:border-[#B99A62] active:scale-95"
+          aria-label="Call Dispatcher Desk"
         >
           <Phone size={14} className="text-[#D4BD8E]" />
           <span>Call Desk</span>
         </a>
 
-        {/* Direct WhatsApp Chat */}
+        {/* Direct WhatsApp Chat — Quiet Luxury Emerald with WhatsApp Accent */}
         <a
           href={`https://wa.me/${BUSINESS_DETAILS.whatsappNumber}?text=${encodeURIComponent(
-            "Hello Parkash Tour & Travels, I would like to book a ride."
+            "Hello Parkash Tour & Travels, I would like to inquire about booking a chauffeur-driven car."
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-[#25D366] py-2.5 text-xs font-bold text-white shadow-md active:scale-95"
+          className="flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-[#25D366]/40 bg-[#16382C] py-2.5 text-xs font-bold text-white shadow-md transition hover:border-[#25D366] active:scale-95"
           aria-label="WhatsApp Booking"
         >
-          <MessageCircle size={15} />
+          <MessageCircle size={15} className="text-[#25D366]" />
           <span>WhatsApp</span>
         </a>
 
-        {/* Scroll to Interactive Booking */}
+        {/* Scroll to Interactive Booking / Fare Calculation */}
         <a
           href="#booking-enquiry"
           onClick={(e) => {
@@ -53,11 +53,11 @@ export default function StickyMobileCTA() {
             const el = document.getElementById("booking-enquiry");
             if (el) el.scrollIntoView({ behavior: "smooth" });
           }}
-          className="flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-[#B99A62] py-2.5 text-xs font-bold text-[#12231D] shadow-md active:scale-95"
-          aria-label="Book Online"
+          className="flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r from-[#B99A62] via-[#D4BD8E] to-[#B99A62] py-2.5 text-xs font-bold text-[#12231D] shadow-md transition hover:brightness-105 active:scale-95"
+          aria-label="Check Fares & Book Ride"
         >
           <CalendarCheck size={14} />
-          <span>Book Ride</span>
+          <span>Check Fares</span>
         </a>
       </div>
     </div>

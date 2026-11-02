@@ -181,6 +181,21 @@ input:focus, select:focus, textarea:focus {
   animation-play-state: paused;
 }
 
+/* Accessibility: Support prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee-trust {
+    animation: none !important;
+  }
+}
+
+/* Responsiveness: Hide scroll indicator on compact height screens to prevent crowding */
+@media (max-height: 720px) and (max-width: 640px) {
+  .compact-hide-scroll {
+    display: none !important;
+  }
+}
+
 /* Full Viewport Mobile & Desktop Hero Height — Reaches the exact bottom of the screen */
 :root {
   --nav-height: 56px;
